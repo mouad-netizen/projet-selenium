@@ -37,6 +37,7 @@ public class LoginPage {
     }
 
     public void seConnecter(String username, String password) {
+        System.out.println("------------------------------> : je me connecte");
         emailField.sendKeys(username);
         passwordField.sendKeys(password);
         boutonConnecter.click();
@@ -48,6 +49,7 @@ public class LoginPage {
     }
 
     public void clickSinscrireGratuitement() {
+        System.out.println("------------------------------> : je clic sur le lien s'incrire !!");
         lienSInscrireGratuitement.click();
     }
 

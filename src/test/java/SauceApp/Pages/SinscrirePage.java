@@ -45,6 +45,7 @@ public class SinscrirePage extends BaseTools {
     }
 
     public void remplirFormulaire(String nom, String email, String telephone, String password, String passwordConfirmation) {
+        System.out.println("------------------------------> : je rempli le formulaire");
         waitAndSendKeys(champNom,nom);
         waitAndSendKeys(champEmail,email);
         waitAndSendKeys(champTelephone,telephone);
@@ -53,31 +54,38 @@ public class SinscrirePage extends BaseTools {
     }
 
     public boolean verifierEtatButton() {
+        System.out.println("------------------------------> : je vérifie l'etat du button");
         return buttonCreerUnCompte.isEnabled();
     }
 
     public void accepterCondition() {
+        System.out.println("------------------------------> : j'accepte les condition d'utilisation");
         waitAndClick(checkboxAccepterCondition);
     }
 
     public void cliquerButtonCreerUnCompte() {
+        System.out.println("------------------------------> : je clic sur le button pour créer un compte ");
         waitAndClick(buttonCreerUnCompte);
     }
 
     public boolean verifierChampEstRempli(String id, String value) {
+        System.out.println("------------------------------> : je vérifie les champs sont rempli");
         WebElement champ = driver.findElement(By.id(id));
         return champ.getAttribute("value").equals(value);
     }
 
     public boolean verifierEtatCheckbox() {
+        System.out.println("------------------------------> : je vérifie le checkbox");
         return checkboxAccepterCondition.isSelected();
     }
 
     public boolean verifierColorElement() {
+        System.out.println("------------------------------> : je vérifie la couleur de la ville ");
         return texteErreurMessageVille.getCssValue("color").equals("rgba(209, 54, 73, 1)");
     }
 
     public boolean verifierAffichageMessageErreurDeLaVilleEnRouge() {
+        System.out.println("------------------------------> : je véfie le message de la ville  ");
         return texteErreurMessageVille.isDisplayed() && verifierColorElement();
     }
 }

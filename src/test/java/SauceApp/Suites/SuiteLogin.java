@@ -12,7 +12,7 @@ public class SuiteLogin extends SetupTearDown {
 
 
 
-    public void Test01_loginInvalide() throws InterruptedException {
+    public void Test01_loginInvalide()  {
 
         WelcomePage welcomePage = new WelcomePage(driver);
         welcomePage.click_se_connecter_button();
@@ -29,7 +29,7 @@ public class SuiteLogin extends SetupTearDown {
         //1.Allez à :https://www.avito.ma/
         WelcomePage welcomePage = new WelcomePage(driver);
         LoginPage pageLogin = new LoginPage(driver);
-        //welcomePage.remove_welcome_popup();
+        welcomePage.remove_welcome_popup();
 
         //2.Cliquez sur lien Se connecter
         welcomePage.click_se_connecter_button();

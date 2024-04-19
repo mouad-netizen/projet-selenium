@@ -23,10 +23,12 @@ public class WelcomePage extends BaseTools {
     }
 
     public void click_se_connecter_button(){
+        System.out.println("------------------------------> : je clic sur le button se connecter");
         waitAndClick(buttonSeConnecter);
     }
 
     public void remove_welcome_popup(){
+        System.out.println("------------------------------> : je ferme le pop UP ");
         waitAndClick( buttonPopUp);
     }
 

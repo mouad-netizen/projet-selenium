@@ -13,6 +13,7 @@ public class SetupTearDown {
 
     @BeforeMethod
     public void lunchBrowser() {
+        System.out.println("------------------------------> je prépare l'enviremnemt de travail");
         System.setProperty("webdriver.edge.driver", "C:\\bin\\msedgedriver.exe");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
@@ -22,6 +23,7 @@ public class SetupTearDown {
 
     @AfterMethod
     public void closeBrowser(){
+        System.out.println("------------------------------> je ferme l'envirenment de travail ");
         driver.quit();
     }
 }
