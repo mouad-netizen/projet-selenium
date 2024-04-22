@@ -15,6 +15,8 @@ public class SetupTearDown {
     @BeforeMethod
     public void lunchBrowser() {
         System.out.println("------------------------------> je prépare l'enviremnemt de travail");
+        System.setProperty("webdriver.edge.driver", "C:\\bin\\msedgedriver.exe");
+        /*
         String browser = System.getenv("Browser");
         if(browser.contentEquals("edge")){
             //System.setProperty("webdriver.edge.driver", "C:\\bin\\msedgedriver.exe");
@@ -25,8 +27,8 @@ public class SetupTearDown {
 
             driver = new FirefoxDriver();
 
-        }
-
+        }*/
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.avito.ma");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

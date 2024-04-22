@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="SuiteLogin">
+    <test verbose="2" preserve-order="true" name="C:/Users/mmajdoub/Downloads/ProjetSeleniumPOM/ProjetSeleniumPOM">
         <classes>
             <class name="SauceApp.Suites.SuiteLogin">
                 <methods>
@@ -10,5 +10,4 @@
             </class>
         </classes>
     </test>
-
 </suite>
