@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="SuiteLogin">
+        <classes>
+            <class name="SauceApp.Suites.SuiteLogin">
+                <methods>
+                    <include name="Test02_sinscrire_gratuitement"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

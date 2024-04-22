@@ -1,0 +1,7 @@
+SauceApp\Pages\SinscrirePage.class
+SauceApp\Utils\BaseTools.class
+SauceApp\Configuration\SetupTearDown.class
+SauceApp\Pages\LoginPage.class
+SauceApp\DataSet\Constante.class
+SauceApp\Suites\SuiteLogin.class
+SauceApp\Pages\WelcomePage.class

@@ -3,6 +3,7 @@ package SauceApp.Configuration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -14,8 +15,18 @@ public class SetupTearDown {
     @BeforeMethod
     public void lunchBrowser() {
         System.out.println("------------------------------> je prépare l'enviremnemt de travail");
-        System.setProperty("webdriver.edge.driver", "C:\\bin\\msedgedriver.exe");
-        driver = new EdgeDriver();
+        String browser = System.getenv("Browser");
+        if(browser.contentEquals("edge")){
+            //System.setProperty("webdriver.edge.driver", "C:\\bin\\msedgedriver.exe");
+             driver = new EdgeDriver();
+        }
+
+        else  {
+
+            driver = new FirefoxDriver();
+
+        }
+
         driver.manage().window().maximize();
         driver.get("https://www.avito.ma");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
